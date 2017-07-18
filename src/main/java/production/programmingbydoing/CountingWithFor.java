@@ -18,12 +18,20 @@ public interface CountingWithFor {
 			System.out.println(count + "." + message);
 		}
 		
+		System.out.println("\n");
+		
 		for(int count = 1; count <= 10; count++) {
 			System.out.println("The current count is " + count);
 			
 		}
 		
+		System.out.println("");
 		
+		int count = 1;
+		while (count <= 10) {
+			System.out.println("The current count is " + count);
+			count++;
+		}
 		
 		
 		
