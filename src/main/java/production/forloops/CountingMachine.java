@@ -1,4 +1,4 @@
-package production.programmingbydoing;
+package production.forloops;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package production.programmingbydoing;
+package production.forloops;
 
 public class XAndY {
 	public static void main(String[] args) {
