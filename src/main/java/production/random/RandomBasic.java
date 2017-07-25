@@ -12,6 +12,9 @@ public class RandomBasic {
 	System.out.println("Here is a random number between 1 and 10: " + "");
 	System.out.println(count);
 	
+	System.out.println("This is a random number between 1 and 100");
+	System.out.println(1 + r.nextInt(100));
+	
 	}
 	
 }
