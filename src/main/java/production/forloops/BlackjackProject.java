@@ -12,39 +12,81 @@ public class BlackjackProject {
 		
 		System.out.println("Welcome to the definitive Blackjack Simulator.\n");
 		
+		//player cards
 		int userFirstCard = 2 + r.nextInt(11);
 		int userSecondCard = 2 + r.nextInt(11);
+		int userCardSum = userFirstCard + userSecondCard;
 		
-		int FirstAndSecondSum = userFirstCard + userSecondCard;
-		
+		//dealer cards
 		int dealerFirstCard = 2 + r.nextInt(11);
 		int dealerSecondCard = 2 + r.nextInt(11);
+		int dealerCardSum = dealerFirstCard + dealerSecondCard;
 		
-		int FirstAndSecondSumDealer = dealerFirstCard + dealerSecondCard;
+		//win booleans
+		boolean userWin = false;
+		boolean dealerWin = false;
+		
 		
 		System.out.println("Your cards are " + userFirstCard + "and " + userSecondCard);
-		System.out.println("Your total is " + FirstAndSecondSum + ".\n");
+		System.out.println("Your total is " + userCardSum + ".\n");
 		
 		System.out.println("The dealers cards are " + dealerFirstCard + " and another hidden card.\n");
 		System.out.println("The dealer total is also hidden.");
 		
-		System.out.println("Would you like to hit or stay?\n");
-		String userInput = input.next();
 		
-		if(userInput.equalsIgnoreCase("hit")) {
+		//primary while starts here
+		while(userCardSum <= 21 && dealerCardSum <= 21) {
+			System.out.println("Would you like to hit or stay?\n");
+			String userInput = input.next();
 			
-			int newTotal = 0;
-			do {
-				int userNewCard = 2 + r.nextInt(11);
-				System.out.println("Your new card is " + userNewCard);
-				newTotal = FirstAndSecondSum + userNewCard;
-				System.out.println("Your new total is " + newTotal);
-			} while(newTotal < 21);
+			//loops for bad user input
+			while(!"hit".equals(userInput) && !"stay".equals(userInput)) {
+				System.out.println("Improper input. Please choose \"hit\" or \"stay\"");
+				userInput = input.next();
+			}
+			
+			//loop for player 'hit' 
+			while("hit".equals(userInput)) {
+				int newRandom = 2 + r.nextInt(11);
+				System.out.println("You drew " + newRandom + ".");
+				userCardSum += newRandom; 
+				System.out.println("Your total is now " + userCardSum + ".");
+				
+					if(userCardSum == 21) {
+						System.out.println("You win (21 condition).");
+						userWin = true;
+						break;
+					}
+					
+					if(userCardSum > 21) {
+						System.out.println("Dealer wins. You went over 21.");
+						dealerWin = true;
+						break;
+					}
+					
+					System.out.println("Would you like to \"hit\" or \"stay\"?");
+					userInput = input.next();
+			}
+			
 			
 		}
 		
+			
 		
-
+		
+//		
+//		
+//		if(userInput.equalsIgnoreCase("hit")) {
+//			isHitting = true;
+//		} else if(userInput.equalsIgnoreCase("stay")) {
+//			isHitting = false;
+//		} else {
+//			System.out.println("Invalid input. Try again. Hit or Stay?");
+//			userInput = input.next();		
+//		}
+//			
+//		
+			
+	
 	}
-
 }
