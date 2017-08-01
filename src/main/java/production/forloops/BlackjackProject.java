@@ -13,13 +13,13 @@ public class BlackjackProject {
 		System.out.println("Welcome to the definitive Blackjack Simulator.\n");
 		
 		//player cards
-		int userFirstCard = 2 + r.nextInt(11);
-		int userSecondCard = 2 + r.nextInt(11);
+		int userFirstCard = r.nextInt((11 - 2) + 1) + 2;
+		int userSecondCard = r.nextInt((11 - 2) + 1) + 2;
 		int userCardSum = userFirstCard + userSecondCard;
 		
 		//dealer cards
-		int dealerFirstCard = 2 + r.nextInt(11);
-		int dealerSecondCard = 2 + r.nextInt(11);
+		int dealerFirstCard = r.nextInt((11 - 2) + 1) + 2;
+		int dealerSecondCard = r.nextInt((11 - 2) + 1) + 2;
 		int dealerCardSum = dealerFirstCard + dealerSecondCard;
 		
 		//win booleans
@@ -27,7 +27,7 @@ public class BlackjackProject {
 		boolean dealerWin = false;
 		
 		
-		System.out.println("Your cards are " + userFirstCard + "and " + userSecondCard);
+		System.out.println("Your cards are " + userFirstCard + " and " + userSecondCard);
 		System.out.println("Your total is " + userCardSum + ".\n");
 		
 		System.out.println("The dealers cards are " + dealerFirstCard + " and another hidden card.\n");
@@ -38,6 +38,7 @@ public class BlackjackProject {
 		while(userCardSum <= 21 && dealerCardSum <= 21) {
 			System.out.println("Would you like to hit or stay?\n");
 			String userInput = input.next();
+				
 			
 			//loops for bad user input
 			while(!"hit".equals(userInput) && !"stay".equals(userInput)) {
@@ -47,7 +48,7 @@ public class BlackjackProject {
 			
 			//loop for player 'hit' 
 			while("hit".equals(userInput)) {
-				int newRandom = 2 + r.nextInt(11);
+				int newRandom = r.nextInt((11 - 2) + 1) + 2;
 				System.out.println("You drew " + newRandom + ".");
 				userCardSum += newRandom; 
 				System.out.println("Your total is now " + userCardSum + ".");
@@ -64,6 +65,13 @@ public class BlackjackProject {
 					
 					System.out.println("Would you like to \"hit\" or \"stay\"?");
 					userInput = input.next();
+					
+					//breaks player out of loop if they choose to "stay"
+					if("stay".equals(userInput)) {
+						break;
+					}
+					
+						
 			}
 			
 			
@@ -81,8 +89,9 @@ public class BlackjackProject {
 			
 			//dealer turn
 			while(dealerCardSum <= 16) {
-				int newRandom = 2 + r.nextInt(11);
-				System.out.println("The dealer drew " + newRandom);
+				System.out.println("The dealers hidden card was " + dealerSecondCard);
+				int newRandom = r.nextInt((11 - 2) + 1) + 2;
+				System.out.println("The dealer draws " + newRandom);
 				dealerCardSum += newRandom;
 				System.out.println("The dealers new total is " + dealerCardSum);
 				
@@ -101,18 +110,7 @@ public class BlackjackProject {
 		}
 		
 		
-//		
-//		
-//		if(userInput.equalsIgnoreCase("hit")) {
-//			isHitting = true;
-//		} else if(userInput.equalsIgnoreCase("stay")) {
-//			isHitting = false;
-//		} else {
-//			System.out.println("Invalid input. Try again. Hit or Stay?");
-//			userInput = input.next();		
-//		}
-//			
-//		
+		
 			
 	
 	}
