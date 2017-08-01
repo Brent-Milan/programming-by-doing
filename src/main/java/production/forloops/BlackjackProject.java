@@ -69,6 +69,23 @@ public class BlackjackProject {
 			}
 			
 			
+			//dealer turn
+			
+			while(dealerCardSum <= 16) {
+				int newRandom = 2 + r.nextInt(11);
+				System.out.println("The dealer drew " + newRandom);
+				dealerCardSum += newRandom;
+				System.out.println("The dealers new total is " + dealerCardSum);
+				
+					if(dealerCardSum == 21) {
+						System.out.println("Dealer landed 21. Dealer wins.");
+						break;
+					}  if(dealerCardSum > 21) {
+						System.out.println("Dealer busted. User wins.");
+					}
+				
+			}
+			
 		}
 		
 			
