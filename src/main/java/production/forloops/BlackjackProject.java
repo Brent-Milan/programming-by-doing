@@ -53,13 +53,11 @@ public class BlackjackProject {
 				System.out.println("Your total is now " + userCardSum + ".");
 				
 					if(userCardSum == 21) {
-						System.out.println("You win (21 condition).");
 						userWin = true;
 						break;
 					}
 					
 					if(userCardSum > 21) {
-						System.out.println("Dealer wins. You went over 21.");
 						dealerWin = true;
 						break;
 					}
@@ -69,8 +67,19 @@ public class BlackjackProject {
 			}
 			
 			
-			//dealer turn
+			//system exit if player has won
+			if(userWin == true) {
+				System.out.println("You win (21 condition).");
+				System.exit(0);
+			}
 			
+			//system exit if dealer has won
+			if(dealerWin == true) {
+				System.out.println("Dealer wins. You went over 21.");
+				System.exit(0);	
+			}
+			
+			//dealer turn
 			while(dealerCardSum <= 16) {
 				int newRandom = 2 + r.nextInt(11);
 				System.out.println("The dealer drew " + newRandom);
@@ -82,13 +91,14 @@ public class BlackjackProject {
 						break;
 					}  if(dealerCardSum > 21) {
 						System.out.println("Dealer busted. User wins.");
+						break;
 					}
 				
 			}
 			
-		}
 		
 			
+		}
 		
 		
 //		
