@@ -1,20 +1,34 @@
 package production.functions;
 
-	import java.util.Random;
+import java.util.Random;
 
-	public class FlickerPhrase {
+
+public class FlickerPhrase {
 		
-		public static void main( String[] args )
-		{
+	public static void main( String[] args ) {
 			Random rng = new Random();
 			int r;
 			
-			for ( int i = 0; i < 100000; i++ )
+			for ( int i = 0; i < 10000; i++ )
 			{
 				r = 1 + rng.nextInt(5);
-				// Write five if statements here.
-				// If r is 1, then call the function named 'first'.
-				// If r is 2, then call the function named 'second', and so on.
+				
+				if(r == 1) {
+					first();
+					;
+				} if(r == 2) {
+					second();
+					
+				} if(r == 3) {
+					third();
+					
+				} if(r == 4) {
+					fourth();
+					
+				} if(r == 5) {
+					fifth();
+					
+				}
 				
 
 				// Optional: after the if statements are over, add in a slight delay.
@@ -49,4 +63,4 @@ package production.functions;
 			System.out.print("                           flag.\r");
 		}
 	}
-}
+
