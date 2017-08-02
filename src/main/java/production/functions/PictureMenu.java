@@ -24,6 +24,8 @@ public class PictureMenu
 			if ( choice == 1 )
 			{
 				butterfly();
+				butterfly();
+				//results in two butterfly ascii being displayed
 			}
 			else if ( choice == 2 )
 			{
@@ -31,11 +33,11 @@ public class PictureMenu
 			}
 			else if ( choice == 3 )
 			{
-				 // * write code here to call the function named 'teddybear'
+				 teddybear();
 			}
 			else if ( choice == 4 )
 			{
-				 // * write code here to call the function named 'snake'
+				 snake();
 			}
 			else 
 			{
