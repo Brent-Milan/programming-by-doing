@@ -86,16 +86,25 @@ public class BlackjackProject {
 				System.out.println("Dealer wins. You went over 21.");
 				System.exit(0);	
 			}
-			
+
 			//dealer turn
+			System.out.println("The dealers hidden card was " + dealerSecondCard + ".\n");
+			System.out.println("The dealers starting total is " + dealerCardSum + ".\n");
+			
 			while(dealerCardSum <= 16) {
-				System.out.println("The dealers hidden card was " + dealerSecondCard);
 				int newRandom = r.nextInt((11 - 2) + 1) + 2;
 				System.out.println("The dealer draws " + newRandom);
 				dealerCardSum += newRandom;
 				System.out.println("The dealers new total is " + dealerCardSum);
 				
-					if(dealerCardSum == 21) {
+			}
+				
+					if(dealerCardSum < 21 && dealerCardSum > userCardSum) {
+						System.out.println("Dealer wins.");
+						break;
+					} if(dealerCardSum < 21 && dealerCardSum < userCardSum) {
+						System.out.println("User wins.");
+					}  if(dealerCardSum == 21) {
 						System.out.println("Dealer landed 21. Dealer wins.");
 						break;
 					}  if(dealerCardSum > 21) {
@@ -107,7 +116,6 @@ public class BlackjackProject {
 			
 		
 			
-		}
 		
 		
 		
