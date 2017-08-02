@@ -14,30 +14,34 @@ public class PictureMenu
 		System.out.println( "3. Teddy Bear" );
 		System.out.println( "4. Snake     " );
 		
-		System.out.print( "\nWhich animal to draw? " );
-		choice = kb.nextInt();
-		System.out.println();
+		do {
 		
-		if ( choice == 1 )
-		{
-			butterfly();
-		}
-		else if ( choice == 2 )
-		{
-			elephant();
-		}
-		else if ( choice == 3 )
-		{
-			 // * write code here to call the function named 'teddybear'
-		}
-		else if ( choice == 4 )
-		{
-			 // * write code here to call the function named 'snake'
-		}
-		else 
-		{
-			System.out.println( "Sorry, that wasn't one of the choices." );
-		}
+			System.out.print( "\nWhich animal to draw? " );
+			choice = kb.nextInt();
+			System.out.println();
+			
+			
+			if ( choice == 1 )
+			{
+				butterfly();
+			}
+			else if ( choice == 2 )
+			{
+				elephant();
+			}
+			else if ( choice == 3 )
+			{
+				 // * write code here to call the function named 'teddybear'
+			}
+			else if ( choice == 4 )
+			{
+				 // * write code here to call the function named 'snake'
+			}
+			else 
+			{
+				System.out.println( "Sorry, that wasn't one of the choices." );
+			}
+		} while(choice != 1 && choice != 2 && choice != 3 && choice != 4);
 
 		System.out.println( "\nGoodbye!" );
 	}
