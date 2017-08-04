@@ -14,31 +14,31 @@ public class MonthName {
 	} // end main
 	
 	
-	public String returnMonth(int monthNum) {
+	public String month_name(int monthNum) {
 		if(monthNum == 1) {
-			System.out.println("January");			
+			return "January";			
 		} else if (monthNum == 2) {
-			System.out.println("February");
+			return "February";
 		} else if (monthNum == 3) {
-			System.out.println("March");
+			return "March";
 		} else if (monthNum == 4) {
-			System.out.println("April");
+			return "April";
 		} else if (monthNum == 5) {
-			System.out.println("May");
+			return "May";
 		} else if (monthNum == 6) {
-			System.out.println("June");
+			return "June"
 		} else if (monthNum == 7) {
-			System.out.println("July");
+			return "July";
 		} else if (monthNum == 8) {
-			System.out.println("August");
+			return "August";
 		} else if (monthNum == 9) {
-			System.out.println("September");
+			return "September";
 		} else if (monthNum == 10) {
-			System.out.println("October");
+			return "October";
 		} else if (monthNum == 11) {
-			System.out.println("November");
+			return "November";
 		} else if (monthNum == 12) {
-			System.out.println("December");
+			return "December";
 		} else {
 			System.out.println("Nonsense. Try again");			
 		}
