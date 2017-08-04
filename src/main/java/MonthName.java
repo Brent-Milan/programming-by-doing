@@ -11,7 +11,7 @@ public class MonthName {
 		System.out.println("Please enter the number of the month (1-12):");
 		int userInput = input.nextInt();
 		
-		System.out.println("Your month is " + month_name(userInput) + ".");
+		System.out.println("Your month is " + month_name(userInput) + ".\n");
 		
 		//provided code for exercise
 
@@ -28,7 +28,6 @@ public class MonthName {
 	    System.out.println( "Month 11: " + month_name(11) );
 	    System.out.println( "Month 12: " + month_name(12) );
 	    System.out.println( "Month 43: " + month_name(43) );
-	}
 
 
 	} // end main
