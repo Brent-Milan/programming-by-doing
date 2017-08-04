@@ -1,5 +1,7 @@
 package production.functions;
 
+import java.util.Scanner;
+
 public class MonthNameRefactor {
 
 	public static void main(String[] args) {
@@ -33,11 +35,11 @@ public class MonthNameRefactor {
 			} // end main
 			
 			
-			public String month_name(int monthNum) {
+			public static int month_name(int monthNum) {
 				String[] months = new String[12]; 
 				String[] months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 				int index = monthNum - 1;
-				;
+				return months[index];
 						
 			
 
