@@ -6,15 +6,15 @@ public class MonthName {
 		
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Please enter the number of the month (1-12");
-		String userInput = input.nextInt();
+		System.out.println("Please enter the number of the month (1-12):");
+		int userInput = input.nextInt();
 		
-		System.out.println("Your month is " + returnMonth(userInput));
+		System.out.println("Your month is " + month_name(userInput));
 
 	} // end main
 	
 	
-	public String month_name(int monthNum) {
+	public static String month_name(int monthNum) {
 		if(monthNum == 1) {
 			return "January";			
 		} else if (monthNum == 2) {
@@ -26,7 +26,7 @@ public class MonthName {
 		} else if (monthNum == 5) {
 			return "May";
 		} else if (monthNum == 6) {
-			return "June"
+			return "June";
 		} else if (monthNum == 7) {
 			return "July";
 		} else if (monthNum == 8) {
@@ -40,7 +40,7 @@ public class MonthName {
 		} else if (monthNum == 12) {
 			return "December";
 		} else {
-			System.out.println("Nonsense. Try again");			
+			return "Nonsense. Try again";			
 		}
 	}
 	
