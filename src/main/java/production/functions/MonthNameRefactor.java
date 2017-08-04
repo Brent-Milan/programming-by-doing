@@ -29,23 +29,19 @@ public class MonthNameRefactor {
 			    System.out.println( "Month 10: " + month_name(10) );
 			    System.out.println( "Month 11: " + month_name(11) );
 			    System.out.println( "Month 12: " + month_name(12) );
-			    System.out.println( "Month 43: " + month_name(43) );
+//			    System.out.println( "Month 43: " + month_name(43) );
 
 
 			} // end main
 			
 			
-			public static int month_name(int monthNum) {
-				String[] months = new String[12]; 
+			public static String month_name(int monthNum) {
 				String[] months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 				int index = monthNum - 1;
 				return months[index];
 						
+				}
 			
-
 		}
-
-
-	}
 
 
