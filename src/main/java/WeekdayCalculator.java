@@ -33,7 +33,8 @@ public class WeekdayCalculator
 
 	public static String weekday( int mm, int dd, int yyyy )
 	{
-		int yy, total;
+		int yy = yyyy - 1900;
+		int total = (yy / 4) + yy + dd;
 		String date = "";
 
 		// bunch of calculations go here
