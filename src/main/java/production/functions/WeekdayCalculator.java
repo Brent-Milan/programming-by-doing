@@ -34,6 +34,7 @@ public class WeekdayCalculator
 
 	public static String weekday( int mm, int dd, int yyyy )
 	{
+		String date = "";
 		int yy = yyyy - 1900;
 		int x = month_offset(mm);
 		int total = (yy / 4) + yy + dd + x;
@@ -41,11 +42,10 @@ public class WeekdayCalculator
 			if(leapYear == true && mm == 1 || leapYear == true && mm == 2) {
 				total -= 1;
 			}
-		int remainder = total / 7;
+//		int remainder = total / 7;
 		
-		String date = "";
 
-		// bunch of calculations go here
+		
 
 		date = month_name(mm) + ", " + yyyy;
 
