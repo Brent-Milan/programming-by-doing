@@ -15,12 +15,19 @@ public class CopyingArrays {
 		for(int index = 0; index < 10; index++) {
 			int randomNum = 1 + r.nextInt(99);
 			arrayOne[index] = randomNum;
-			System.out.print(arrayOne[index] + " ");
+			System.out.print(arrayOne[index] + "  ");
 		}
 
 		
+		//ArrayOne copied to ArrayTwo
+		System.arraycopy(arrayOne, 0, arrayTwo, 0, 10);
 		
-		System.arrayCopy(arrayOne, 0, arrayTwo, 0, 9);
+		//Testing whether copy occurred
+		System.out.println("\narrayTwo contains the following elements: ");
+		for(int index = 0; index < arrayTwo.length; index++) {
+			System.out.print(arrayTwo[index] + "  ");
+		}
+		
 		
 	}
 
