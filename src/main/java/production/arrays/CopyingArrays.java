@@ -9,6 +9,7 @@ public class CopyingArrays {
 		Random r = new Random();
 		
 		int[] arrayOne = new int[10];
+		int[] arrayTwo = new int[10];
 		
 		System.out.println("arrayOne contains the following elements:");
 		for(int index = 0; index < 10; index++) {
@@ -17,6 +18,10 @@ public class CopyingArrays {
 			System.out.print(arrayOne[index] + " ");
 		}
 
+		
+		
+		System.arrayCopy(arrayOne, 0, arrayTwo, 0, 9);
+		
 	}
 
 }
