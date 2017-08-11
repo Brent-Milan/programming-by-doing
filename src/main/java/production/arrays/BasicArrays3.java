@@ -12,14 +12,12 @@ public class BasicArrays3 {
 			int[] anArray = new int[1000];
 			
 			for(int count = 0; count < anArray.length; count++) {
-				int randomNum = 10 + r.nextInt(99);
+				int randomNum = 10 + r.nextInt(89);
 				anArray[count] = randomNum;
-				System.out.println(randomNum + "  ");
-				
-				
+				System.out.println(anArray[count] + " ");
 			}
 			
+				
 			
 	}
-
 }
