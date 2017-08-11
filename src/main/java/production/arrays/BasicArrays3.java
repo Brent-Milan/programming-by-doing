@@ -14,7 +14,7 @@ public class BasicArrays3 {
 			for(int count = 0; count < anArray.length; count++) {
 				int randomNum = 10 + r.nextInt(89);
 				anArray[count] = randomNum;
-				System.out.println(anArray[count] + " ");
+				System.out.print(anArray[count] + "  ");
 			}
 			
 				
