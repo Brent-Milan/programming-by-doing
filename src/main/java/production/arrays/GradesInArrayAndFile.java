@@ -12,7 +12,12 @@ public class GradesInArrayAndFile {
 		
 		Scanner input = new Scanner(System.in);
 		
+		int[] gradesInArray = new int[5];
 		
+		for(int index = 0; index < 5; index++) {
+			int randomNum = 1 + r.nextInt(99);
+			gradesInArray[index] = randomNum;
+		}
 
 	}
 
