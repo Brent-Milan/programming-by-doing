@@ -30,11 +30,16 @@ public class GradesInArrayAndFile {
 			gradesInArray[index] = randomNum;
 		}
 
-		System.out.println("Your current grades are: ");
+		System.out.println("\nUser profile: " + studentFirst + " " + studentLast);
+		System.out.println("File saved under: " + studentFile);
+		System.out.println("Grades for this session are: ");
 		
 		for(int index = 0; index < gradesInArray.length; index++) {
 			System.out.print(gradesInArray[index] + "  ");
 		}
+		
+		
+		
 		
 		
 	}
