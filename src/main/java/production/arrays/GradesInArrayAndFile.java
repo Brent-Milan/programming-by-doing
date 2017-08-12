@@ -1,11 +1,14 @@
 package production.arrays;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Random;
 import java.util.Scanner;
 
 public class GradesInArrayAndFile {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		
 		Random r = new Random();
@@ -31,7 +34,11 @@ public class GradesInArrayAndFile {
 		}
 
 		System.out.println("\nUser profile: " + studentFirst + " " + studentLast);
+		String[] nameArray = { studentFirst, studentLast };
+		
 		System.out.println("File saved under: " + studentFile);
+		PrintWriter fileWriter = new PrintWriter(new FileWriter(studentFile));
+		
 		System.out.println("Grades for this session are: ");
 		
 		for(int index = 0; index < gradesInArray.length; index++) {

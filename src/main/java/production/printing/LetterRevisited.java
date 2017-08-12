@@ -35,7 +35,7 @@ public class LetterRevisited {
 		
 		fileWriter.close();
 		
-		}
+		} // end main
 		
 	
 	
