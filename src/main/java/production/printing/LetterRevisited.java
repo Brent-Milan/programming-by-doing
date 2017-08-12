@@ -11,8 +11,6 @@ public class LetterRevisited {
 		String fileName = "PBD_letter.text";
 		String[] anArrayOfStrings = {
 		
-		
-	
 		"+--------------------------------------------+",
 		"|                                       #### |",
 		"|                                       #### |",
@@ -26,9 +24,13 @@ public class LetterRevisited {
 		"|                                            |",
 		"+--------------------------------------------+"	
 		
-		}
+		};
 		
 		PrintWriter fileWriter = new PrintWriter(new FileWriter(fileName));
+		
+		for(int index = 0; index < anArrayOfStrings.length; index++) {
+			fileWriter.println(anArrayOfStrings[index]);
+		}
 		
 		
 		fileWriter.close();
