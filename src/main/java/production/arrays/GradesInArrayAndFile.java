@@ -14,11 +14,29 @@ public class GradesInArrayAndFile {
 		
 		int[] gradesInArray = new int[5];
 		
+		System.out.println("Enter the first name of the student: ");
+		String studentFirst = input.next();
+		
+		System.out.println("Enter the last name of the student: ");
+		String studentLast = input.next();
+		
+		System.out.println("Enter the name of the save file: ");
+		String studentFile = input.next();
+		
+		
+		
 		for(int index = 0; index < 5; index++) {
 			int randomNum = 1 + r.nextInt(99);
 			gradesInArray[index] = randomNum;
 		}
 
+		System.out.println("Your current grades are: ");
+		
+		for(int index = 0; index < gradesInArray.length; index++) {
+			System.out.print(gradesInArray[index] + "  ");
+		}
+		
+		
 	}
 
 }
