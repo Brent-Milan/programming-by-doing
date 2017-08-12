@@ -33,17 +33,24 @@ public class GradesInArrayAndFile {
 			gradesInArray[index] = randomNum;
 		}
 
+		System.out.println("File saved under: " + studentFile);
+		PrintWriter fileWriter = new PrintWriter(new FileWriter(studentFile));
+		
 		System.out.println("\nUser profile: " + studentFirst + " " + studentLast);
 		String[] nameArray = { studentFirst, studentLast };
 		
-		System.out.println("File saved under: " + studentFile);
-		PrintWriter fileWriter = new PrintWriter(new FileWriter(studentFile));
+		
+		for(int index = 0; index < nameArray.length; index++) {
+			fileWriter.print(nameArray[index]);
+		}
 		
 		System.out.println("Grades for this session are: ");
 		
 		for(int index = 0; index < gradesInArray.length; index++) {
 			System.out.print(gradesInArray[index] + "  ");
+			fileWriter.print(gradesInArray[index]);
 		}
+		
 		
 		
 		
