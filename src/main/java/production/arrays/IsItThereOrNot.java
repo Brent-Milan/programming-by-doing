@@ -13,7 +13,12 @@ public class IsItThereOrNot {
 		
 		Scanner input = new Scanner(System.in);
 		
+		System.out.print("Array: ");
 		
+		for(int index = 0; index < anArray.length; index++) {
+			anArray[index] = 1 + r.nextInt(49);
+			System.out.print(anArray[index] + "  ");
+		}
 
 	}
 
