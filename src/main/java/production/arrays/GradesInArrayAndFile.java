@@ -63,8 +63,7 @@ public class GradesInArrayAndFile {
 		}
 		
 		
-		
-		
+		fileWriter.close();
 		
 		
 	} // end main
