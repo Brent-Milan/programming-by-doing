@@ -19,17 +19,21 @@ public class FindingAValueInAnArray {
 		}
 		
 		//prints out all elements within intArray to console
+		System.out.println("Elements in the array are: ");
+		
 		for(int index = 0; index < intArray.length; index++) {
 			System.out.print(intArray[index] + "  ");
 		}
 		
 		//prompts user for search value and saves in variable
-		System.out.println("Which value would you like to find? (1-50) : ");
+		System.out.println("\n\nWhich value would you like to validate? (1-50) ");
+//		System.out.println("Please enter a number 1- 50. Enter '0' to exit.");
 		int userInput = input.nextInt();
 		
 		boolean contains = IntStream.of(intArray).anyMatch(x -> x == userInput);
 		System.out.println(contains);
-
+		
+			
 	}
 
 }
