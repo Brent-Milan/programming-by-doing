@@ -22,7 +22,7 @@ public class HowManyTimes {
 			System.out.print(anArray[index] + "  ");
 		}
 		
-		System.out.println("\nWhich number would you like to check the frequency of?");
+		System.out.println("\n\nWhich number would you like to check the frequency of?");
 		int userInput = input.nextInt();
 		
 		//iterates over array and increases the value of count each time a match is found
@@ -36,7 +36,7 @@ public class HowManyTimes {
 		
 		//prints count
 		System.out.println("\nNumber to search: " + userInput);
-		System.out.println("Found " + count + " times");
+		System.out.println("Found " + count + " time(s)");
 		
 		
 
