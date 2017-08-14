@@ -24,18 +24,17 @@ public class WhereIsIt {
 		System.out.println("\n\nWhich number would you like to validate?");
 		int userInput = input.nextInt();
 		
+		System.out.println("\nNumber to find: " + userInput + "\n");
+		
 		int count = 0;
 		for(int index = 0; index < anArray.length; index++) {
 			if(userInput == anArray[index]) {
-				System.out.println("Found " + userInput + " at index " + index);
+				System.out.println("Found " + userInput + " at index " + index + ".");
 				count++;
-			}
-			
+			}	
 		}
-		
-		
-		
-		System.out.println("Your number was found " + count + "time(s).");
+	
+		System.out.println("Your number was found " + count + " time(s).");
 		
 	}
 
