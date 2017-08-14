@@ -16,6 +16,7 @@ public class FindingTheLargestValue {
 		
 		System.out.print("Array: ");
 		
+		//populates array and prints to console
 		for(int index = 0; index < anArray.length; index++) {
 			anArray[index] = 1 + r.nextInt(99);
 			System.out.print(anArray[index] + "  ");
@@ -24,6 +25,8 @@ public class FindingTheLargestValue {
 		
 		int theOne = 0;
 		
+		//compares each element to a variable. 
+		//variable is set to higher and higher values until highest is found
 		for(int index = 0; index < anArray.length; index++) {
 			if(anArray[index] > theOne) {
 				theOne = anArray[index];
