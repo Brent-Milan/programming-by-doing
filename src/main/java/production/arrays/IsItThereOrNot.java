@@ -37,7 +37,7 @@ public class IsItThereOrNot {
 		if(count > 0) {
 			System.out.println("\n" + userInput + " is present in the array.");
 		} else if(count == 0) {
-			System.out.println("\nThe array does not contain " + userInput + "n");
+			System.out.println("\nThe array does not contain " + userInput + ".");
 		}
 		
 		
