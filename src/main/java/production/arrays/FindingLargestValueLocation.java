@@ -24,17 +24,19 @@ public class FindingLargestValueLocation {
 				theOne = anArray[index];
 			}
 		}
+		
+		System.out.println("\n\nThe highest value in the array is " + theOne + ".");
 
 		//iterates over array again to find index location of highest value and print to console
 		for(int index = 0; index < anArray.length; index++) {
 			if(anArray[index] == theOne) {
-				System.out.println("A highest value element is located at index " + index);
+				System.out.println("A highest value element is located at index " + index + ".");
 			}
 		}
 		
 		
 		
 		
-	}
+	} //end main
 
 }
