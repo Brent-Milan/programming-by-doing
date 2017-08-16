@@ -13,33 +13,42 @@ public class TicTacToe {
 		displayBoard();
 		
 		
+		
+		System.out.println("Player One, where would you like to place your 'x'?");
+		
+		//player one turn
+		System.out.println("Enter first coordinate (x position): ");
 		int userInputX = keyboard.nextInt();	
+		
+		System.out.println("\nEnter second coordinate (y position): ");
 		int userInputY = keyboard.nextInt();
 		
-		System.out.println("Player One. Where would you like to place your 'x'?");
+		reassignToX(userInputX, userInputY);
+		displayBoard();
+		
+		//player two turn
+		System.out.println("Player Two, where would you like to place your 'o'?");
+		
 		System.out.println("Enter first coordinate (x position): ");
+		int userInputX = keyboard.nextInt();	
 		
-		System.out.println("\nEnter second coordinate (y position: ");
+		System.out.println("\nEnter second coordinate (y position): ");
+		int userInputY = keyboard.nextInt();
 		
-		//player one turn
-		reassignToX(1, 1);
+		reassignToO(userInputX, userInputY);
 		displayBoard();
-		
-		//player two turn
-		reassignToO(0, 0);
-		displayBoard();
-		
-		//player one turn
-		reassignToX(0, 2);
-		displayBoard();
-		
-		//player two turn
-		reassignToO(1, 0);
-		displayBoard();
-		
-		//player one turn
-		reassignToX(2, 0);
-		displayBoard();
+//		
+//		//player one turn
+//		reassignToX(0, 2);
+//		displayBoard();
+//		
+//		//player two turn
+//		reassignToO(1, 0);
+//		displayBoard();
+//		
+//		//player one turn
+//		reassignToX(2, 0);
+//		displayBoard();
 		
 		System.out.println("\nPlayer One Wins!");
 		
