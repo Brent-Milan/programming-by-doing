@@ -14,9 +14,9 @@ public class TicTacToe {
 		
 		
 		
+		//player one turn
 		System.out.println("Player One, where would you like to place your 'x'?");
 		
-		//player one turn
 		System.out.println("Enter first coordinate (x position): ");
 		int userInputX = keyboard.nextInt();	
 		
@@ -98,4 +98,28 @@ public class TicTacToe {
 		board[posX][posY] = 'o'; 
 	
 	}
+	
+	public static boolean gameEnd() {
+		
+		if(board[0][0] == board[0][1] && board[0][1] == board[0][2]) {
+			return true;
+		} else if(board[0][0] == board[1][0] && board[1][0] == board[2][0]) {
+			return true;
+		} else if(board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
+			return true;
+		} else if(board[1][0] == board[1][1] && board[1][1] == board[1][2]) {
+			return true;
+		} else if(board[2][0] == board[2][1] && board[2][1] == board[2][2]) {
+			return true;
+		} else if(board[0][1] == board[1][1] && board[1][1] == board[2][1]) {
+			return true;
+		} else if(board[0][2] == board[1][2] && board[1][2] == board[2][2]]) {
+			return true;
+		}		
+		
+		
+		
+	}
+	
+	
 } // end class
