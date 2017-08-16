@@ -13,9 +13,28 @@ public class TicTacToe {
 		displayBoard();
 		
 		//player one turn
+		reassignToX(1, 1);
+		displayBoard();
 		
-
-	}
+		//player two turn
+		reassignToO(0, 0);
+		displayBoard();
+		
+		//player one turn
+		reassignToX(0, 2);
+		displayBoard();
+		
+		//player two turn
+		reassignToO(1, 0);
+		displayBoard();
+		
+		//player one turn
+		reassignToX(2, 0);
+		displayBoard();
+		
+		System.out.println("\nPlayer One Wins!");
+	} // end main
+	
 
 	public static void initBoard()
 	{
@@ -34,6 +53,7 @@ public class TicTacToe {
 		System.out.println("    --+-+--");
 		System.out.println("  2  " + board[2][0] + "|" + board[2][1] + "|" + board[2][2]);
 		System.out.println("     0 1 2 ");
+		System.out.println("\n");
 	}
 
 
@@ -50,7 +70,6 @@ public class TicTacToe {
 		}
 		System.out.println("\t  0 1 2 ");
 	}
-}
 
 	public static void reassignToX(int posX, int posY) {
 		board[posX][posY] = 'x'; 
@@ -59,4 +78,5 @@ public class TicTacToe {
 	public static void reassignToO(int posX, int posY) {
 		board[posX][posY] = 'o'; 
 	
-	
+	}
+}
