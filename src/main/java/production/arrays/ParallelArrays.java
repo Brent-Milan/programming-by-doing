@@ -26,7 +26,16 @@ public class ParallelArrays {
 		System.out.println("\nPlease enter in the student ID number below: ");
 		int userInput = input.nextInt();
 		
+		int count = 0;
 		
+		for(int index = 0; index < studentId.length; index++) {
+			if(userInput == studentId[index]) {
+				System.out.println("Student ID: " + studentId[count]);
+				System.out.println(lastNames[count]);
+				System.out.println(grades[count]);
+			}
+			count++;
+		}
 		
 		
 		
@@ -54,16 +63,16 @@ public class ParallelArrays {
 		}
 	}
 	
-	public static void indexReturn(int[] array, int userInput) {
-		for(int index = 0; index < array.length; index++) {
-			int count = 0;
-			if(userInput == array[index]) {
-				System.out.println(array[index]);
-				return count;
-			}
-			count++;
-		}
-	}
-	
+//	public static void indexReturn(int[] array, int userInput) {
+//		for(int index = 0; index < array.length; index++) {
+//			int count = 0;
+//			if(userInput == array[index]) {
+//				System.out.println(array[index]);
+//				return count;
+//			} 
+//			count++;
+//		}
+//	}
+//	
 	
 }
