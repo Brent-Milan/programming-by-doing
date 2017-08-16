@@ -8,9 +8,18 @@ public class TicTacToe {
 
 	public static void main( String[] args ) {
 		Scanner keyboard = new Scanner(System.in);
-
+	
 		initBoard();
 		displayBoard();
+		
+		
+		int userInputX = keyboard.nextInt();	
+		int userInputY = keyboard.nextInt();
+		
+		System.out.println("Player One. Where would you like to place your 'x'?");
+		System.out.println("Enter first coordinate (x position): ");
+		
+		System.out.println("\nEnter second coordinate (y position: ");
 		
 		//player one turn
 		reassignToX(1, 1);
@@ -33,7 +42,8 @@ public class TicTacToe {
 		displayBoard();
 		
 		System.out.println("\nPlayer One Wins!");
-	} // end main
+		
+	} //end main
 	
 
 	public static void initBoard()
@@ -79,4 +89,4 @@ public class TicTacToe {
 		board[posX][posY] = 'o'; 
 	
 	}
-}
+} // end class
