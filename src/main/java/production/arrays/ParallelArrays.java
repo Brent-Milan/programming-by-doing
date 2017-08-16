@@ -10,11 +10,18 @@ public class ParallelArrays {
 		
 		int[] studentId = { 23, 44, 10, 88, 50 };
 		
+		System.out.println("Student last names: ");
 		toString(lastNames);
+		
+		System.out.println("\n\nStudent grades: ");
+		toString(grades);
+		
+		System.out.println("\n\nStudent IDs: ");
+		toString(studentId);
 		
 		
 
-	}
+	} //end main
 
 	
 	public static void toString(int[] array) {
