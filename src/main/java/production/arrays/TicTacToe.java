@@ -11,6 +11,9 @@ public class TicTacToe {
 
 		initBoard();
 		displayBoard();
+		
+		//player one turn
+		
 
 	}
 
@@ -48,3 +51,12 @@ public class TicTacToe {
 		System.out.println("\t  0 1 2 ");
 	}
 }
+
+	public static void reassignToX(int posX, int posY) {
+		board[posX][posY] = 'x'; 
+	}
+	
+	public static void reassignToO(int posX, int posY) {
+		board[posX][posY] = 'o'; 
+	
+	
