@@ -13,30 +13,31 @@ public class TicTacToe {
 		displayBoard();
 		
 		
-		
-		//player one turn
-		System.out.println("Player One, where would you like to place your 'x'?");
-		
-		System.out.println("Enter first coordinate (x position): ");
-		int userInputX = keyboard.nextInt();	
-		
-		System.out.println("\nEnter second coordinate (y position): ");
-		int userInputY = keyboard.nextInt();
-		
-		reassignToX(userInputX, userInputY);
-		displayBoard();
-		
-		//player two turn
-		System.out.println("Player Two, where would you like to place your 'o'?");
-		
-		System.out.println("Enter first coordinate (x position): ");
-		int userInputX = keyboard.nextInt();	
-		
-		System.out.println("\nEnter second coordinate (y position): ");
-		int userInputY = keyboard.nextInt();
-		
-		reassignToO(userInputX, userInputY);
-		displayBoard();
+		do {
+			//player one turn
+			System.out.println("Player One, where would you like to place your 'x'?");
+			
+			System.out.println("Enter first coordinate (x position): ");
+			int userInputX = keyboard.nextInt();	
+			
+			System.out.println("\nEnter second coordinate (y position): ");
+			int userInputY = keyboard.nextInt();
+			
+			reassignToX(userInputX, userInputY);
+			displayBoard();
+			
+			//player two turn
+			System.out.println("Player Two, where would you like to place your 'o'?");
+			
+			System.out.println("Enter first coordinate (x position): ");
+			int userInputX = keyboard.nextInt();	
+			
+			System.out.println("\nEnter second coordinate (y position): ");
+			int userInputY = keyboard.nextInt();
+			
+			reassignToO(userInputX, userInputY);
+			displayBoard();
+		} while(gameOn() == true && tieCheck() == false)
 //		
 //		//player one turn
 //		reassignToX(0, 2);
@@ -99,27 +100,39 @@ public class TicTacToe {
 	
 	}
 	
-	public static boolean gameEnd() {
+	public static boolean gameOn() {
 		
 		if(board[0][0] == board[0][1] && board[0][1] == board[0][2]) {
-			return true;
+			return false;
 		} else if(board[0][0] == board[1][0] && board[1][0] == board[2][0]) {
-			return true;
+			return false;
 		} else if(board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
-			return true;
+			return false;
 		} else if(board[1][0] == board[1][1] && board[1][1] == board[1][2]) {
-			return true;
+			return false;
 		} else if(board[2][0] == board[2][1] && board[2][1] == board[2][2]) {
-			return true;
+			return false;
 		} else if(board[0][1] == board[1][1] && board[1][1] == board[2][1]) {
-			return true;
+			return false;
 		} else if(board[0][2] == board[1][2] && board[1][2] == board[2][2]]) {
+			return false;	
+		} else {
 			return true;
-		}		
-		
-		
-		
+		}			
 	}
+	
+	
+	public static boolean tieCheck() {
+		for(int x = 0; x < board.length; x++) {
+			for(int y = 0; y < board.length; y++) {
+				if(board[x][y] == ' ') {
+					return false;
+				}
+			}
+		}
+		return true;
+	}	
+		
 	
 	
 } // end class
