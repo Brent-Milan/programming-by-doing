@@ -30,14 +30,15 @@ public class TicTacToe {
 			System.out.println("Player Two, where would you like to place your 'o'?");
 			
 			System.out.println("Enter first coordinate (x position): ");
-			int userInputX = keyboard.nextInt();	
+			userInputX = keyboard.nextInt();	
 			
 			System.out.println("\nEnter second coordinate (y position): ");
-			int userInputY = keyboard.nextInt();
+			userInputY = keyboard.nextInt();
 			
 			reassignToO(userInputX, userInputY);
 			displayBoard();
-		} while(gameOn() == true && tieCheck() == false)
+			
+		} while(gameOn() == true && isTied() == false);
 //		
 //		//player one turn
 //		reassignToX(0, 2);
@@ -114,7 +115,7 @@ public class TicTacToe {
 			return false;
 		} else if(board[0][1] == board[1][1] && board[1][1] == board[2][1]) {
 			return false;
-		} else if(board[0][2] == board[1][2] && board[1][2] == board[2][2]]) {
+		} else if(board[0][2] == board[1][2] && board[1][2] == board[2][2]) {
 			return false;	
 		} else {
 			return true;
@@ -122,7 +123,7 @@ public class TicTacToe {
 	}
 	
 	
-	public static boolean tieCheck() {
+	public static boolean isTied() {
 		for(int x = 0; x < board.length; x++) {
 			for(int y = 0; y < board.length; y++) {
 				if(board[x][y] == ' ') {
