@@ -105,17 +105,17 @@ public class TicTacToe {
 		
 		if(board[0][0] == board[0][1] && board[0][1] == board[0][2]) {
 			return false;
-		} else if(board[0][0] == board[1][0] && board[1][0] == board[2][0]) {
+		} else if(board[0][0] == board[1][0] && board[1][0] == board[2][0] && (board[0][0] == 'x' || board[0][0] == 'o')) {
 			return false;
-		} else if(board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
+		} else if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && (board[0][0] == 'x' || board[0][0] == 'o')) {
 			return false;
-		} else if(board[1][0] == board[1][1] && board[1][1] == board[1][2]) {
+		} else if(board[1][0] == board[1][1] && board[1][1] == board[1][2] && (board[1][0] == 'x' || board[1][0] == 'o')) {
 			return false;
-		} else if(board[2][0] == board[2][1] && board[2][1] == board[2][2]) {
+		} else if(board[2][0] == board[2][1] && board[2][1] == board[2][2] && (board[2][0] == 'x' || board[2][0] == 'o')) {
 			return false;
-		} else if(board[0][1] == board[1][1] && board[1][1] == board[2][1]) {
+		} else if(board[0][1] == board[1][1] && board[1][1] == board[2][1] && (board[0][1] == 'x' || board[0][1] == 'o')) {
 			return false;
-		} else if(board[0][2] == board[1][2] && board[1][2] == board[2][2]) {
+		} else if(board[0][2] == board[1][2] && board[1][2] == board[2][2] && (board[0][2] == 'x' || board[0][2] == 'o')) {
 			return false;	
 		} else {
 			return true;
