@@ -44,19 +44,9 @@ public class TicTacToe {
 			displayBoard();
 			
 		} while(gameOn() == true && isTied() == false);
-//		
-//		//player one turn
-//		reassignToX(0, 2);
-//		displayBoard();
-//		
-//		//player two turn
-//		reassignToO(1, 0);
-//		displayBoard();
-//		
-//		//player one turn
-//		reassignToX(2, 0);
-//		displayBoard();
+
 		
+		if(board)
 		System.out.println("\nPlayer One Wins!");
 		
 	} //end main
@@ -138,7 +128,43 @@ public class TicTacToe {
 		}
 		return true;
 	}	
-		
 	
+	public static boolean playerOneWins() {
+		if(board[0][0] == board[0][1] && board[0][1] == board[0][2] && board[0][0] == 'x') {
+			return true;
+		} else if(board[0][0] == board[1][0] && board[1][0] == board[2][0] && board[0][0] == 'x') {
+			return true;
+		} else if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] == 'x') {
+			return true;
+		} else if(board[1][0] == board[1][1] && board[1][1] == board[1][2] && board[1][0] == 'x') {
+			return true;
+		} else if(board[2][0] == board[2][1] && board[2][1] == board[2][2] && board[2][0] == 'x') {
+			return true;
+		} else if(board[0][1] == board[1][1] && board[1][1] == board[2][1] && board[0][1] == 'x') {
+			return true;
+		} else if(board[0][2] == board[1][2] && board[1][2] == board[2][2] && board[0][2] == 'x') {
+			return true;	
+	} else {
+		return false;
+	}
+		
+		public static boolean playerTwoWins() {
+			if(board[0][0] == board[0][1] && board[0][1] == board[0][2] && board[0][0] == 'o') {
+				return true;
+			} else if(board[0][0] == board[1][0] && board[1][0] == board[2][0] && board[0][0] == 'o') {
+				return true;
+			} else if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] == 'o') {
+				return true;
+			} else if(board[1][0] == board[1][1] && board[1][1] == board[1][2] && board[1][0] == 'o') {
+				return true;
+			} else if(board[2][0] == board[2][1] && board[2][1] == board[2][2] && board[2][0] == 'o') {
+				return true;
+			} else if(board[0][1] == board[1][1] && board[1][1] == board[2][1] && board[0][1] == 'o') {
+				return true;
+			} else if(board[0][2] == board[1][2] && board[1][2] == board[2][2] && board[0][2] == 'o') {
+				return true;	
+		} else {
+			return false;
+		}
 	
 } // end class
