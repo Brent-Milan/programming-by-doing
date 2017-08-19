@@ -30,6 +30,10 @@ public class TicTacToe {
 			if(gameOn() == false) {
 				break;
 			}
+			//checks for a tie before continuing 
+			if(isTied()) == true) {
+				break;
+			}
 			
 			//player two turn
 			System.out.println("Player Two, where would you like to place your 'o'?");
@@ -46,8 +50,18 @@ public class TicTacToe {
 		} while(gameOn() == true && isTied() == false);
 
 		
-		if(board)
+		//checks for win or tie conditions and prints result
+		if(playerOneWins()) {
 		System.out.println("\nPlayer One Wins!");
+		}
+		
+		if(playerTwoWins()) {
+			System.out.println("\nPlayer One Wins!");
+		}
+		
+		if(isTied()) {
+			System.out.println("\nThe game is tied. Good game");
+		}
 		
 	} //end main
 	
@@ -144,8 +158,9 @@ public class TicTacToe {
 			return true;
 		} else if(board[0][2] == board[1][2] && board[1][2] == board[2][2] && board[0][2] == 'x') {
 			return true;	
-	} else {
-		return false;
+		} else {
+			return false;
+		}
 	}
 		
 		public static boolean playerTwoWins() {
@@ -163,8 +178,9 @@ public class TicTacToe {
 				return true;
 			} else if(board[0][2] == board[1][2] && board[1][2] == board[2][2] && board[0][2] == 'o') {
 				return true;	
-		} else {
-			return false;
+			} else {
+				return false;
+			}
 		}
 	
 } // end class
