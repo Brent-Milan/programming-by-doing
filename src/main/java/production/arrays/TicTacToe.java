@@ -31,7 +31,7 @@ public class TicTacToe {
 				break;
 			}
 			//checks for a tie before continuing 
-			if(isTied()) == true) {
+			if(isTied() == true) {
 				break;
 			}
 			
