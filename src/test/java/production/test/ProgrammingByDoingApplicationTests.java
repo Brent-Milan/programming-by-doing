@@ -1,4 +1,4 @@
-package production.programmingbydoing;
+package production.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
